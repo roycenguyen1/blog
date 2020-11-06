@@ -1,0 +1,85 @@
+$text-xs: 1.1rem;
+$text-sm: 1.3rem;
+$text-md: 1.5rem;
+$text-lg: 1.7rem;
+$text-xl: 2.5rem;
+$text-xxl: 3rem;
+
+$primary-color: #fff;
+$secondary-color: #727272;
+$accent-color: #ebdbc7;
+
+$main-font: "Roboto", sans-serif;
+$accent-font: "Satisfy", cursive;
+$heading-font: "Bebas Neue", cursive;
+
+@mixin flexBox($di: row, $jus: flex-start, $al: flex-start) {
+  display: flex;
+  flex-direction: $di;
+  justify-content: $jus;
+  align-items: $al;
+}
+
+@mixin flexCenter($di: row, $jus: center, $al: center) {
+  display: flex;
+  flex-direction: $di;
+  justify-content: $jus;
+  align-items: $al;
+}
+
+@mixin transition($time: 0.5s) {
+  transition: all $time ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  letter-spacing: 1px;
+  font-family: $main-font;
+  color: $secondary-color;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.buffer {
+  height: 150px;
+  z-index: -1;
+}
+
+/* BACK TO TOP BUTTON */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 100;
+  border: none;
+  outline: none;
+  color: #000;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+#myBtn:hover {
+  color: lighten(#000, 15%);
+  transition: all 0.5s ease;
+}
+/* END BACK TO TOP BUTTON */

@@ -1,0 +1,139 @@
+@import "config";
+
+// --------------Header----------------
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  background: #fff;
+  @include flexCenter;
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+
+  .nav {
+    &-list {
+      @include flexCenter;
+      font-family: $accent-font;
+      font-size: $text-md;
+
+      &-item {
+        margin: 0 0.8rem;
+      }
+    }
+
+    .logo {
+      width: 130px;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+// --------------Showcase----------------
+.showcase {
+  background: url(../img/yanapi-senaud-wEy8TRGUuLY-unsplash.jpg) no-repeat
+    center center/cover;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  width: 100%;
+  height: 450px;
+  min-height: 450px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &-inner {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    color: #fff;
+    @include flexCenter($di: column);
+    text-align: center;
+
+    h1 {
+      font-family: $heading-font;
+      font-size: $text-xxl;
+    }
+
+    p {
+      font-size: $text-xs;
+    }
+  }
+}
+
+// --------------About----------------
+.about {
+  width: 100%;
+
+  &-inner {
+    width: 70%;
+    min-height: 650px;
+    padding: 10em 0;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      "image heading ."
+      "image text text";
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    padding-left: 2rem;
+  }
+}
+
+.about-inner-image {
+  grid-area: image;
+  background: url(../img/liam-simpson-umycmizZHn8-unsplash.jpg) no-repeat center
+    center;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    background: $accent-color;
+    z-index: -1;
+  }
+}
+
+.about-inner-heading {
+  grid-area: heading;
+  align-self: end;
+  font-family: $heading-font;
+
+  h1 {
+    font-size: 3.5rem;
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: -20px;
+      width: 320%;
+      height: 100%;
+      border: 2px solid #000;
+      z-index: -1;
+    }
+  }
+}
+
+.about-inner-text {
+  grid-area: text;
+}
