@@ -149,7 +149,9 @@
 
     &-heading {
       text-align: center;
+      background: #000;
       color: #fff;
+      padding: 0.5rem;
       margin-bottom: 4rem;
 
       h1 {
@@ -162,6 +164,50 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 4rem;
+
+      img {
+        border: white solid 10px;
+        border-bottom: white solid 70px;
+      }
+    }
+  }
+}
+
+// --------------Footer----------------
+.footer-inner {
+  @include flexBox($jus: space-between);
+  padding: 2rem 0;
+  width: 80%;
+  margin: auto;
+
+  a {
+    color: $secondary-color;
+  }
+
+  .footer-col1 {
+    .email {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .social i {
+      font-size: 1.8rem;
+      margin-right: 1.3rem;
+    }
+  }
+  .footer-col2 {
+    .footer-menu {
+      @include flexBox();
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+
+      li {
+        margin-left: 2rem;
+      }
+    }
+
+    .copy {
+      text-align: right;
     }
   }
 }
