@@ -137,3 +137,31 @@
 .about-inner-text {
   grid-area: text;
 }
+
+// --------------Gallery----------------
+.gallery {
+  background: #2b2b2b;
+  padding: 5rem 0;
+
+  &-inner {
+    width: 80%;
+    margin: auto;
+
+    &-heading {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 4rem;
+
+      h1 {
+        font-family: $accent-font;
+        font-size: $text-xxl;
+      }
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 4rem;
+    }
+  }
+}
