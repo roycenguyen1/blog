@@ -16,9 +16,10 @@
       @include flexCenter;
       font-family: $accent-font;
       font-size: $text-md;
+      margin-left: 2rem;
 
       &-item {
-        margin: 0 0.8rem;
+        margin: 0 1.2rem;
       }
     }
 
@@ -79,7 +80,7 @@
 
   &-inner {
     width: 70%;
-    min-height: 650px;
+    height: 650px;
     padding: 10em 0;
     margin: auto;
     display: grid;
@@ -117,7 +118,7 @@
   font-family: $heading-font;
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 5vw;
     display: inline-block;
     position: relative;
 
@@ -126,7 +127,7 @@
       content: "";
       top: 0;
       right: -20px;
-      width: 320%;
+      width: 290%;
       height: 100%;
       border: 2px solid #000;
       z-index: -1;
@@ -167,7 +168,7 @@
 
       img {
         border: white solid 10px;
-        border-bottom: white solid 70px;
+        border-bottom: white solid 7vw;
       }
     }
   }
@@ -211,3 +212,5 @@
     }
   }
 }
+
+@import "mobile";
