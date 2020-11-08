@@ -192,6 +192,15 @@
     }
   }
 
+  .showcase {
+    &-inner {
+      width: 80%;
+      h1 {
+        font-size: $text-lg;
+      }
+    }
+  }
+
   .about {
     &-inner {
       width: 85%;
