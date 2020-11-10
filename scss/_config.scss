@@ -83,3 +83,28 @@ a {
   transition: all 0.5s ease;
 }
 /* END BACK TO TOP BUTTON */
+
+// Media Queries mixin
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 801px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
